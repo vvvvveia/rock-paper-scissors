@@ -1,0 +1,186 @@
+/* Body & Semantics */
+
+body {
+    background-color: #fdfaf3;
+    color: #333;
+    font-family: sans-serif;
+    font-size: 100%;
+    margin: auto;
+    max-width: 680px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+cite {
+    font-style: normal;
+}
+code {
+    border-radius: 3px;
+}
+code, pre {
+    background-color: #e7e7e7;
+    color: #222;
+    font-family: monospace;
+    padding: 3px;
+}
+hr {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    max-width: 400px;
+}
+img {
+    margin: auto;
+}
+p {
+    line-height: 130%;
+}
+pre {
+    border-radius: 4px;
+    line-height: 150%;
+}
+
+/* Blockquote */
+
+blockquote {
+    border-left: 3px solid #ccc;
+    font-size: 100%;
+    line-height: 125%;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+blockquote footer {
+    margin-left: 40px;
+    padding-left: 15px;
+}
+blockquote q:after {
+    content: "”";
+}
+blockquote q:before {
+    content: "“";
+}
+blockquote q q:after {
+    content: "’";
+}
+blockquote q q:before {
+    content: "‘";
+}
+q:after {
+    content: "”";
+}
+q:before {
+    content: "“";
+}
+q q:after {
+    content: "’";
+}
+q q:before {
+    content: "‘";
+}
+
+/* Headings */
+
+h1 {
+    color: #272727;
+    font-family: sans-serif;
+    font-size: 250%;
+    font-weight: 600;
+    line-height: 125%;
+}
+h2 {
+    color: #272727;
+    font-family: sans-serif;
+    font-size: 170%;
+    font-weight: 600;
+    line-height: 115%;
+}
+h3 {
+    color: #272727;
+    font-family: sans-serif;
+    font-size: 140%;
+    font-weight: 600;
+    line-height: 113%;
+}
+h4 {
+    color: #272727;
+    font-family: sans-serif;
+    font-size: 120%;
+    font-weight: 600;
+    line-height: 111%;
+}
+
+/* Lists */
+
+dl, ol, ul {
+    line-height: 130%;
+}
+dd, dt, dl {
+    list-style-position: outside;
+}
+dd {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+dt {
+    padding-top: 15px;
+    text-decoration: underline dotted;
+}
+
+/* Links
+
+Lord    → link
+Vader   → visited
+Hates   → hover
+Furry   → focus
+Animals → active
+*/
+
+/*
+a {
+
+}
+a:link {
+
+}
+a:visited {
+
+}
+a:hover {
+
+}
+a:focus {
+
+}
+a:active {
+
+}*/
+
+/* Tables */
+
+table {
+    background: #fafafa;
+    border-collapse: collapse;
+    border-radius: 1px;
+    border-spacing: 0px;
+    color: #444;
+    font-family: sans-serif;
+    font-size: 100%;
+}
+table td {
+    border: 1px solid #555;
+    padding: 12px;
+}
+table tr {
+    text-align: center;
+}
+thead {
+    background: #f5f5f5;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    font-weight: 600;
+    padding: 8px 12px 19px 12px;
+}
+
+/* Custom Styles */
+
+.smallcaps, .smllcps, .sc {
+    font-size: 75%;
+}
