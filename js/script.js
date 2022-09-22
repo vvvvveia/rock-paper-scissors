@@ -1,4 +1,4 @@
-/* scissors > paper; paper > rock; rock > scissors
+/* 
  *
  * - Get random number between 0-2 to represent R/P/S choice for computer
  * - Get user input to decide their choice
@@ -28,4 +28,43 @@ function getComputerChoice() {
   }
 
   return compChoice;
+}
+
+function playRound(playerInput) {
+  // initialize for later
+  let result;
+  // define player and computer choice for processing
+  let playerChoice = playerInput.toLowerCase();
+  let compChoice = getComputerChoice();
+
+  if (playerChoice === 'rock' && compChoice === 'paper') {
+    result = 'Computer wins, paper beats rock!';
+    return result;
+  } else if (playerChoice === 'rock' && compChoice === 'scissors') {
+    result = 'You win, rock beats scissors!';
+    return result;
+  } else if (playerChoice === 'rock' && compChoice === 'rock') {
+    result = 'Tie, you both chose rock!';
+    return result;
+  } else if (playerChoice === 'scissors' && compChoice === 'paper') {
+    result = 'You win, rock beats paper!';
+    return result;
+  } else if (playerChoice === 'scissors' && compChoice === 'scissors') {
+    result = 'Tie, you both chose scissors!';
+    return result;
+  } else if (playerChoice === 'scissors' && compChoice === 'rock') {
+    result = 'Computer wins, rock beats scissors!';
+    return result;
+  } else if (playerChoice === 'paper' && compChoice === 'paper') {
+    result = 'Tie, you both chose paper!';
+    return result;
+  } else if (playerChoice === 'paper' && compChoice === 'scissors') {
+    result = 'Computer wins, paper beats rock!';
+    return result;
+  } else if (playerChoice === 'paper' && compChoice === 'rock') {
+    result = 'You win, paper beats rock!';
+    return result;
+  } else {
+    console.log('Damn son, where\'d you find this?');
+  }
 }
