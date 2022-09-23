@@ -48,41 +48,43 @@ function playRound(playerInput) {
      * scissors === scissors
      * paper === paper
      * rock === rock
+     * 
+     * ++ the score of who wins the round
      */
     if (playerChoice === "rock" && compChoice === "paper") {
         result = "Computer wins, paper beats rock!";
+        compScore++;
         return result;
     } else if (playerChoice === "rock" && compChoice === "scissors") {
         result = "You win, rock beats scissors!";
+        playerScore++;
         return result;
     } else if (playerChoice === "rock" && compChoice === "rock") {
         result = "Tie, you both chose rock!";
         return result;
     } else if (playerChoice === "scissors" && compChoice === "paper") {
         result = "You win, rock beats paper!";
+        playerScore++;
         return result;
     } else if (playerChoice === "scissors" && compChoice === "scissors") {
         result = "Tie, you both chose scissors!";
         return result;
     } else if (playerChoice === "scissors" && compChoice === "rock") {
         result = "Computer wins, rock beats scissors!";
+        compScore++;
         return result;
     } else if (playerChoice === "paper" && compChoice === "paper") {
         result = "Tie, you both chose paper!";
         return result;
     } else if (playerChoice === "paper" && compChoice === "scissors") {
         result = "Computer wins, paper beats rock!";
+        compScore++;
         return result;
     } else if (playerChoice === "paper" && compChoice === "rock") {
         result = "You win, paper beats rock!";
+        playerScore++;
         return result;
     } else {
         console.log("Damn son, where'd you find this?");
     }
-}
-
-function game() {
-    let userInput = prompt("What's your move?");
-    let result = playRound(userInput);
-    console.log(result);
 }
