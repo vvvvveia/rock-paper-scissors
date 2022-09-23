@@ -90,12 +90,12 @@ function game() {
         playRound(prompt("Rock, Paper, or Scissors?"));
     }
 
-    if (compScore <= 5) {
+    if (compScore >= 5) {
         compScore = 0;
         playerScore = 0;
         console.log("The computer has won the game!");
         return "The computer has won the game!";
-    } else if (playerScore <= 5) {
+    } else if (playerScore >= 5) {
         compScore = 0;
         playerScore = 0;
         console.log("You have won the game!");
