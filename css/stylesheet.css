@@ -16,7 +16,8 @@ cite {
 code {
     border-radius: 3px;
 }
-code, pre {
+code,
+pre {
     background-color: #e7e7e7;
     color: #222;
     font-family: monospace;
@@ -109,10 +110,14 @@ h4 {
 
 /* Lists */
 
-dl, ol, ul {
+dl,
+ol,
+ul {
     line-height: 130%;
 }
-dd, dt, dl {
+dd,
+dt,
+dl {
     list-style-position: outside;
 }
 dd {
@@ -181,6 +186,8 @@ thead {
 
 /* Custom Styles */
 
-.smallcaps, .smllcps, .sc {
+.smallcaps,
+.smllcps,
+.sc {
     font-size: 75%;
 }
