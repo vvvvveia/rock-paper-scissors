@@ -22,6 +22,14 @@ function getComputerChoice() {
     return compChoice;
 }
 
+// defines logic of game, basically:
+// - rock > scissors
+// - paper > rock
+// - scissors > paper
+// - scissors == scissors
+// - paper == paper
+// - rock == rock
+// then ++ score of who wins the round, return & console.log result
 function playRound(playerInput) {
     // initialize for later
     let result;
@@ -29,15 +37,6 @@ function playRound(playerInput) {
     let playerChoice = playerInput.toLowerCase();
     let compChoice = getComputerChoice();
 
-    /* rock > scissors
-     * paper > rock
-     * scissors > paper
-     * scissors === scissors
-     * paper === paper
-     * rock === rock
-     *
-     * ++ the score of who wins the round
-     */
     if (playerChoice === "rock" && compChoice === "paper") {
         result = "Computer wins, paper beats rock!";
         compScore++;
@@ -85,6 +84,7 @@ function playRound(playerInput) {
     }
 }
 
+// play rounds of game until player or computer score is 5, then reset score
 function game() {
     while (compScore <= 5 && playerScore <= 5) {
         playRound(prompt("Rock, Paper, or Scissors?"));
@@ -106,7 +106,7 @@ function game() {
     }
 }
 
-// Initialize counters to keep score
+// initialize counters to keep score
 let compScore = 0;
 let playerScore = 0;
 
