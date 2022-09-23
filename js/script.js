@@ -52,7 +52,7 @@ function playRound(playerInput) {
         console.log(result);
         return result;
     } else if (playerChoice === "scissors" && compChoice === "paper") {
-        result = "You win, rock beats paper!";
+        result = "You win, scissors beats paper!";
         console.log(result);
         playerScore++;
         return result;
