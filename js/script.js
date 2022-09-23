@@ -1,6 +1,6 @@
 // generates computer choices using random numbers
 function getComputerChoice() {
-    // ranomly generates 0, 1, or 2 int
+    // randomly generates 0, 1, or 2 int
     function getRandomInt() {
         return Math.floor(Math.random() * 3);
     }
