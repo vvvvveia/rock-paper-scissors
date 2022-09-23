@@ -1,16 +1,3 @@
-/*
- *
- * - Get random number between 0-2 to represent R/P/S choice for computer
- * - Get user input to decide their choice
- * - Do logic to figure out which choice wins
- * - Update count of winner, do next round
- * - Repeat this until winner count is 5
- */
-
-// Initialize counters to keep score
-let compScore = 0;
-let playerScore = 0;
-
 // generates computer choices using random numbers
 function getComputerChoice() {
     // ranomly generates 0, 1, or 2 int
@@ -48,43 +35,80 @@ function playRound(playerInput) {
      * scissors === scissors
      * paper === paper
      * rock === rock
-     * 
+     *
      * ++ the score of who wins the round
      */
     if (playerChoice === "rock" && compChoice === "paper") {
         result = "Computer wins, paper beats rock!";
         compScore++;
+        console.log(result);
         return result;
     } else if (playerChoice === "rock" && compChoice === "scissors") {
         result = "You win, rock beats scissors!";
         playerScore++;
+        console.log(result);
         return result;
     } else if (playerChoice === "rock" && compChoice === "rock") {
         result = "Tie, you both chose rock!";
+        console.log(result);
         return result;
     } else if (playerChoice === "scissors" && compChoice === "paper") {
         result = "You win, rock beats paper!";
+        console.log(result);
         playerScore++;
         return result;
     } else if (playerChoice === "scissors" && compChoice === "scissors") {
         result = "Tie, you both chose scissors!";
+        console.log(result);
         return result;
     } else if (playerChoice === "scissors" && compChoice === "rock") {
         result = "Computer wins, rock beats scissors!";
+        console.log(result);
         compScore++;
         return result;
     } else if (playerChoice === "paper" && compChoice === "paper") {
         result = "Tie, you both chose paper!";
+        console.log(result);
         return result;
     } else if (playerChoice === "paper" && compChoice === "scissors") {
         result = "Computer wins, paper beats rock!";
+        console.log(result);
         compScore++;
         return result;
     } else if (playerChoice === "paper" && compChoice === "rock") {
         result = "You win, paper beats rock!";
+        console.log(result);
         playerScore++;
         return result;
     } else {
-        console.log("Damn son, where'd you find this?");
+        console.log("Hey, that's not allowed!");
     }
 }
+
+function game() {
+    while (compScore <= 5 && playerScore <= 5) {
+        playRound(prompt("Rock, Paper, or Scissors?"));
+    }
+
+    if (compScore <= 5) {
+        compScore = 0;
+        playerScore = 0;
+        console.log("The computer has won the game!");
+        return "The computer has won the game!";
+    } else if (playerScore <= 5) {
+        compScore = 0;
+        playerScore = 0;
+        console.log("You have won the game!");
+        return "You have won the game!";
+    } else {
+        console.log("Why did you break my game? :(");
+        return "Why did you break my game? :(";
+    }
+}
+
+// Initialize counters to keep score
+let compScore = 0;
+let playerScore = 0;
+
+// launch game on load
+game();
