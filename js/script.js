@@ -70,7 +70,7 @@ function playRound(playerInput) {
         console.log(result);
         return result;
     } else if (playerChoice === "paper" && compChoice === "scissors") {
-        result = "Computer wins, paper beats rock!";
+        result = "Computer wins, scissors beats paper!";
         console.log(result);
         compScore++;
         return result;
@@ -86,7 +86,7 @@ function playRound(playerInput) {
 
 // play rounds of game until player or computer score is 5, then reset score
 function game() {
-    while (compScore <= 5 && playerScore <= 5) {
+    while (compScore <= 4 && playerScore <= 4) {
         playRound(prompt("Rock, Paper, or Scissors?"));
     }
 
