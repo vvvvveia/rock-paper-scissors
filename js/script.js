@@ -8,7 +8,7 @@ function getComputerChoice() {
     let compChoice; // initialize for use later in loop
     let compNum = getRandomInt();
 
-    // assigns rock/paper/scissors choice based on random number generator
+    // assigns rock/paper/scissors to choice
     if (compNum === 0) {
         compChoice = "rock";
     } else if (compNum === 1) {
@@ -22,14 +22,6 @@ function getComputerChoice() {
     return compChoice;
 }
 
-// defines logic of game, basically:
-// - rock > scissors
-// - paper > rock
-// - scissors > paper
-// - scissors == scissors
-// - paper == paper
-// - rock == rock
-// then ++ score of who wins the round, return & console.log result
 function playRound(playerInput) {
     // initialize for later
     let result;
@@ -68,7 +60,6 @@ function playRound(playerInput) {
     }
 }
 
-// play rounds of game until player or computer score is 5, then reset score
 function game() {
     while (compScore <= 4 && playerScore <= 4) {
         playRound(prompt("Rock, Paper, or Scissors?"));
@@ -94,5 +85,4 @@ function game() {
 let compScore = 0;
 let playerScore = 0;
 
-// launch game on load
 game();
