@@ -61,9 +61,9 @@ function playRound(playerInput) {
 }
 
 function game() {
-    while (compScore <= 4 && playerScore <= 4) {
+    do {
         playRound(prompt("Rock, Paper, or Scissors?"));
-    }
+    } while (compScore <= 4 && playerScore <= 4);
 
     if (compScore >= 4) {
         compScore = 0;
